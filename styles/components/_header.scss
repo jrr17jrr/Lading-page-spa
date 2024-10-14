@@ -1,0 +1,143 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+header {
+    background: variaveis.$gradiente-primario;
+    padding: 2rem; /* Padding inicial */
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+
+        .linha {
+            border-top: 1px solid black;
+            width: 80%;
+        }
+
+        ul {
+            display: inline-flex;
+            gap: 2rem;
+
+            li {
+                list-style-type: none;
+            }
+
+            a {
+                text-decoration: none;
+                @include mixins.ff-fs-cl(variaveis.$ft-textos, 1rem, variaveis.$cor-primaria);
+                font-weight: 500;
+                transition: .3s;
+                &:hover {
+                    transform: scale(1.2);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    #home {
+        max-width: 1040px;
+        @include mixins.margem-central(80%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .textos-home {
+            width: 100%; /* Ajusta a largura para ser responsiva */
+
+            h1 {
+                font-size: 3vw; /* Ajusta o tamanho do texto proporcional à largura da tela */
+                color: variaveis.$cor-primaria;
+                margin-bottom: 2rem;
+                font-family: variaveis.$ft-titulos;
+
+                span {
+                    color: variaveis.$cor-secundaria;
+                }
+            }
+
+            a{
+                &hover{
+                    font-weight: bold;
+                }
+            }
+
+            .btn-main {
+                @include mixins.botao;
+                
+                
+
+                &:hover {
+                    background: variaveis.$cor-secundaria;
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .img-home {
+            max-width: 50vw; /* Ajusta a largura da imagem proporcionalmente */
+            max-width: 474px; /* Define um limite máximo */
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    header {
+        padding: 1.5rem; /* Reduz o padding do header em telas médias */
+    }
+
+    #home {
+        flex-direction: row; /* Alinha itens em coluna em telas menores */
+        align-items: center;
+        justify-content: center;
+
+        .textos-home {
+            h1 {
+                font-size: 5vw; /* Aumenta a responsividade do texto */
+            }
+
+            .btn-main {
+                width: 80vw; /* Botão mais largo em telas menores */
+            }
+        }
+
+        .img-home {
+            max-width: 60vw; /* Ajusta o tamanho da imagem para telas médias */
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        padding: 1rem; /* Reduz ainda mais o padding em telas pequenas */
+        background: variaveis.$gradiente-primario;
+
+        #home {
+            flex-direction: column; /* Coloca o texto acima da imagem */
+
+            .textos-home {
+                width: 100%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
+
+                h1 {
+                    font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
+                }
+
+                .btn-main {
+                    width: 100%; /* Botão ocupa toda a largura disponível no mobile */
+                    max-width: none; /* Remove limite no mobile */
+                    height: auto; /* Ajusta a altura */
+                }
+            }
+
+            .img-home {
+                display: block; 
+            }
+        }
+    }
+}

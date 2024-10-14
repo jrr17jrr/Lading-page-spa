@@ -1,0 +1,118 @@
+@use '../abstract/mixins';
+@use '../abstract/variaveis';
+
+#nosso-espaco {
+    .detalhes {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+        padding: 2rem 0;
+
+        .imgs-espaco {
+            width: 40vw; /* Responsivo: Ajusta a largura conforme a viewport */
+            max-width: 500px; /* Limita a largura máxima */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+
+        .espaco-textos {
+            @extend .imgs-espaco; /* Se preferir, remova isso, pois pode causar duplicidade */
+            flex: 1; /* Permite que os textos ocupem o espaço restante */
+            .titulo {
+                @include mixins.ff-fs-cl(variaveis.$ft-titulos, 2.4em, variaveis.$cor-secundaria); /* Responsivo */
+                font-weight: 500;
+            }
+
+            .infos {
+                @include mixins.ff-fs-cl(variaveis.$ft-textos, 1.5em, variaveis.$cor-primaria); /* Responsivo */
+            }
+
+            .separador {
+                width: 100%;
+            }
+        }
+
+        &:nth-child(2) {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .detalhes {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      
+
+        .espaco-textos {
+            margin: 0 5em;
+        }
+
+        .imgs-espaco {
+            width: 20vw; /* Responsivo: Ajusta a largura conforme a viewport */
+            max-width: 500px; /* Limita a largura máxima */
+            height: auto; /* Mantém a proporção da imagem */
+            margin: 0 5em;
+        }
+
+        
+
+
+        .imgs-espaco {
+            width: 70vw; /* Ajusta a largura para telas médias */
+            max-width: none; /* Remove limite de largura */
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #nosso-espaco {
+        .detalhes {
+            flex-direction: column; /* Coloca os itens em coluna para telas menores */
+            text-align: center; /* Centraliza o texto */
+
+            .imgs-espaco,
+            .espaco-textos {
+                width: 80vw; /* Ajusta o tamanho das imagens e textos para telas menores */
+                max-width: none; /* Remove limite de largura */
+            }
+
+            .titulo {
+                font-size: 4vw; /* Ajusta o tamanho da fonte do título para telas menores */
+            }
+
+            .infos {
+                font-size: 3.5vw; /* Ajusta o tamanho da fonte das infos para telas menores */
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #nosso-espaco {
+        .detalhes {
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 1rem; /* Reduz o espaçamento entre os elementos */
+            padding: 1rem 0; /* Reduz o padding em telas muito pequenas */
+
+            .imgs-espaco,
+            .espaco-textos {
+                width: 90vw; /* Ocupa a maior parte da tela em telas pequenas */
+                margin: 0;
+            }
+
+            .titulo {
+                font-size: 150em; /* Tamanho de fonte ainda menor para telas muito pequenas */
+            }
+
+            .infos {
+                font-size: 5em; /* Tamanho de fonte ajustado para infos */
+
+
+            }
+        }
+    }
+}

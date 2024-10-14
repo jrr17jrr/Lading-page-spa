@@ -1,0 +1,119 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+#contatos {
+    @include mixins.margem-central(80%);
+    display: flex;
+    flex-direction: column; /* Muda a direção para coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+    gap: 2rem;
+
+    .contatos-imgs {
+        max-width: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: space-around;
+
+        img {
+            width: 100%;
+            &:nth-child(n + 2) {
+                width: 48%; /* Mantém a largura da segunda imagem em diante */
+            }
+        }
+    }
+
+    .contatos-form {
+        max-width: 50%;
+        background: variaveis.$gradiente-primario;
+        padding: 2rem 3rem;
+        border-radius: 2rem;
+
+        .titulo {
+            @include mixins.ff-fs-cl(variaveis.$ft-titulos, 1.9rem, variaveis.$cor-secundaria);
+        }
+
+        .infos {
+            @include mixins.ff-fs-cl(variaveis.$ft-textos, 1.2rem, variaveis.$cor-primaria);
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+            align-self: stretch;
+
+            input {
+                border-radius: 25px;
+                padding: 1rem;
+                border: none;
+            }
+
+            .form-group {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+
+                label {
+                    @extend .infos;
+                    font-weight: bold;
+                }
+
+                textarea {
+                    @extend input;
+                }
+            }
+
+            .btn {
+                @include mixins.botao;
+                
+                cursor: pointer; /* Muda o cursor para um ponteiro */
+                
+
+                &:hover {
+                    background: variaveis.$cor-secundaria;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    #contatos {
+        flex-direction: column; /* Mantém a direção como coluna para telas menores */
+
+        .contatos-imgs, .contatos-form {
+            max-width: 90%; /* Aumenta a largura máxima em telas menores */
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #contatos {
+        .contatos-imgs {
+            img {
+                width: 100%; /* Imagens ocupam 100% da largura em telas pequenas */
+                &:nth-child(n + 2) {
+                    width: 100%; /* Garante que todas as imagens ocupem 100% */
+                }
+            }
+        }
+
+        .contatos-form {
+            padding: 1.5rem; /* Reduz o padding em telas pequenas */
+            
+            .titulo {
+                @include mixins.ff-fs-cl(variaveis.$ft-titulos, 1.6rem, variaveis.$cor-secundaria); /* Diminui o tamanho do título */
+            }
+
+            .infos {
+                @include mixins.ff-fs-cl(variaveis.$ft-textos, 1rem, variaveis.$cor-primaria); /* Diminui o tamanho do texto */
+            }
+        }
+    }
+}

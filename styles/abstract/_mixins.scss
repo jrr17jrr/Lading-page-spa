@@ -1,0 +1,23 @@
+@mixin margem-central($width){
+    margin: 0 auto;
+    width: $width;
+}
+@mixin ff-fs-cl($f-family, $f-size, $f-color){
+    font-family: $f-family;
+    font-size: $f-size;
+    color: $f-color;
+}
+
+@mixin botao{
+    background-color: variaveis.$cor-secundaria;
+                font-family: variaveis.$ft-textos ;
+                color: variaveis.$cor-quaternaria ; 
+                border-radius: 30px ;
+                font-weight: 500px;
+                width: 16em;
+                height: 4em;
+                font-size: 1.4em;
+                padding: 14px;
+                border: none;  
+                cursor: pointer;
+}

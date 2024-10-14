@@ -1,0 +1,480 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
+  padding: 2rem; /* Padding inicial */
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+header nav .linha {
+  border-top: 1px solid black;
+  width: 80%;
+}
+header nav ul {
+  display: inline-flex;
+  gap: 2rem;
+}
+header nav ul li {
+  list-style-type: none;
+}
+header nav ul a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #0C0421;
+  font-weight: 500;
+  transition: 0.3s;
+}
+header nav ul a:hover {
+  transform: scale(1.2);
+  font-weight: 700;
+}
+header #home {
+  max-width: 1040px;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header #home .textos-home {
+  width: 100%; /* Ajusta a largura para ser responsiva */
+}
+header #home .textos-home h1 {
+  font-size: 3vw; /* Ajusta o tamanho do texto proporcional à largura da tela */
+  color: #0C0421;
+  margin-bottom: 2rem;
+  font-family: "Krona One", sans-serif;
+}
+header #home .textos-home h1 span {
+  color: #4e75ff;
+}
+header #home .textos-home ahover {
+  font-weight: bold;
+}
+header #home .textos-home .btn-main {
+  background-color: #4e75ff;
+  font-family: "Montserrat", sans-serif;
+  color: #E8F5C8;
+  border-radius: 30px;
+  font-weight: 500px;
+  width: 16em;
+  height: 4em;
+  font-size: 1.4em;
+  padding: 14px;
+  border: none;
+  cursor: pointer; /* Muda o cursor para um ponteiro */
+}
+header #home .textos-home .btn-main:hover {
+  background: #4e75ff;
+  transform: scale(1.1);
+}
+header #home .img-home {
+  max-width: 50vw; /* Ajusta a largura da imagem proporcionalmente */
+  max-width: 474px; /* Define um limite máximo */
+}
+header #home .img-home img {
+  width: 100%;
+}
+
+@media (max-width: 770px) {
+  header {
+    padding: 1.5rem; /* Reduz o padding do header em telas médias */
+  }
+  #home {
+    flex-direction: row; /* Alinha itens em coluna em telas menores */
+    align-items: center;
+    justify-content: center;
+  }
+  #home .textos-home h1 {
+    font-size: 5vw; /* Aumenta a responsividade do texto */
+  }
+  #home .textos-home .btn-main {
+    width: 80vw; /* Botão mais largo em telas menores */
+  }
+  #home .img-home {
+    max-width: 60vw; /* Ajusta o tamanho da imagem para telas médias */
+  }
+}
+@media (max-width: 500px) {
+  header {
+    padding: 1rem; /* Reduz ainda mais o padding em telas pequenas */
+    background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
+  }
+  header #home {
+    flex-direction: column; /* Coloca o texto acima da imagem */
+  }
+  header #home .textos-home {
+    width: 100%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
+  }
+  header #home .textos-home h1 {
+    font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
+  }
+  header #home .textos-home .btn-main {
+    width: 100%; /* Botão ocupa toda a largura disponível no mobile */
+    max-width: none; /* Remove limite no mobile */
+    height: auto; /* Ajusta a altura */
+  }
+  header #home .img-home {
+    display: block;
+  }
+}
+#nosso-espaco .detalhes {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+#nosso-espaco .detalhes .imgs-espaco, #nosso-espaco .detalhes .espaco-textos {
+  width: 40vw; /* Responsivo: Ajusta a largura conforme a viewport */
+  max-width: 500px; /* Limita a largura máxima */
+  height: auto; /* Mantém a proporção da imagem */
+}
+#nosso-espaco .detalhes .espaco-textos {
+  /* Se preferir, remova isso, pois pode causar duplicidade */
+  flex: 1; /* Permite que os textos ocupem o espaço restante */
+}
+#nosso-espaco .detalhes .espaco-textos .titulo {
+  font-family: "Krona One", sans-serif;
+  font-size: 2.4em;
+  color: #4e75ff;
+  /* Responsivo */
+  font-weight: 500;
+}
+#nosso-espaco .detalhes .espaco-textos .infos {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  color: #0C0421;
+  /* Responsivo */
+}
+#nosso-espaco .detalhes .espaco-textos .separador {
+  width: 100%;
+}
+#nosso-espaco .detalhes:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 1200px) {
+  .detalhes {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .detalhes .espaco-textos {
+    margin: 0 5em;
+  }
+  .detalhes .imgs-espaco, #nosso-espaco .detalhes .espaco-textos {
+    width: 20vw; /* Responsivo: Ajusta a largura conforme a viewport */
+    max-width: 500px; /* Limita a largura máxima */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 5em;
+  }
+  .detalhes .imgs-espaco, #nosso-espaco .detalhes .espaco-textos {
+    width: 70vw; /* Ajusta a largura para telas médias */
+    max-width: none; /* Remove limite de largura */
+  }
+}
+@media (max-width: 768px) {
+  #nosso-espaco .detalhes {
+    flex-direction: column; /* Coloca os itens em coluna para telas menores */
+    text-align: center; /* Centraliza o texto */
+  }
+  #nosso-espaco .detalhes .imgs-espaco,
+  #nosso-espaco .detalhes .espaco-textos {
+    width: 80vw; /* Ajusta o tamanho das imagens e textos para telas menores */
+    max-width: none; /* Remove limite de largura */
+  }
+  #nosso-espaco .detalhes .titulo {
+    font-size: 4vw; /* Ajusta o tamanho da fonte do título para telas menores */
+  }
+  #nosso-espaco .detalhes .infos {
+    font-size: 3.5vw; /* Ajusta o tamanho da fonte das infos para telas menores */
+  }
+}
+@media (max-width: 500px) {
+  #nosso-espaco .detalhes {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem; /* Reduz o espaçamento entre os elementos */
+    padding: 1rem 0; /* Reduz o padding em telas muito pequenas */
+  }
+  #nosso-espaco .detalhes .imgs-espaco,
+  #nosso-espaco .detalhes .espaco-textos {
+    width: 90vw; /* Ocupa a maior parte da tela em telas pequenas */
+    margin: 0;
+  }
+  #nosso-espaco .detalhes .titulo {
+    font-size: 150em; /* Tamanho de fonte ainda menor para telas muito pequenas */
+  }
+  #nosso-espaco .detalhes .infos {
+    font-size: 5em; /* Tamanho de fonte ajustado para infos */
+  }
+}
+#servico {
+  background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
+  padding: 5rem 0;
+}
+#servico .cards {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores */
+  justify-content: space-between; /* Espaço entre os cards */
+  gap: 1.5rem;
+}
+#servico .cards .card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(202, 212, 250, 0.3) 100%);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 3rem;
+  flex: 1 1 300px; /* Flexível para crescer e encolher, com um mínimo de 300px */
+  max-width: calc(33.33% - 1.5rem); /* Limite para três cards por linha */
+}
+#servico .cards .card-titulo {
+  font-family: "Krona One", sans-serif;
+  font-size: 1.6rem;
+  color: #0C0421;
+}
+#servico .cards .card-texto {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #0C0421;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1325px) {
+  #servico .cards {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  #servico .cards .card {
+    max-width: calc(50% - 1.5rem); /* Limite para dois cards por linha */
+    flex: 1 1 45%; /* Ajusta a largura mínima para dois cards */
+  }
+}
+@media (max-width: 500px) {
+  #servico .cards .card {
+    max-width: 100%; /* Um card por linha em telas muito pequenas */
+    flex: 1 1 100%; /* 100% da largura */
+  }
+}
+#desconto {
+  margin-bottom: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#desconto h4 {
+  font-family: "Krona One", sans-serif;
+  font-size: 1.6rem;
+  color: #0C0421;
+}
+#desconto p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #0C0421;
+}
+#desconto .input-btn {
+  width: 790px;
+  max-width: 100%; /* Limita a largura máxima para 100% */
+  height: 65px;
+  border: 1px solid #4e75ff;
+  border-radius: 65px;
+  margin: 1rem 0; /* Margem em cima e embaixo para espaçamento */
+  display: flex; /* Usar flex para alinhar os itens internamente */
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+#desconto .input-btn input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #0C0421;
+  width: 65%; /* Alterado para porcentagem */
+  border: none;
+  outline: none;
+  padding: 0 1rem; /* Adiciona padding ao redor do texto */
+}
+#desconto .input-btn button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  width: 50%; /* Alterado para porcentagem */
+  height: 100%;
+  background: #4e75ff;
+  border-radius: 0 65px 65px 0;
+  border: none;
+  padding: 0; /* Remove padding extra */
+}
+
+@media (max-width: 1135px) {
+  #desconto {
+    display: flex;
+    flex-direction: column; /* Muda a direção para coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+    text-align: center;
+  }
+}
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  #desconto .input-btn {
+    width: 100%; /* 100% da largura em telas menores */
+    max-width: 100%; /* Garante que não ultrapasse 100% */
+  }
+  #desconto input {
+    width: 80%; /* Ajusta a largura do input */
+  }
+  #desconto button {
+    width: 20%; /* Ajusta a largura do botão */
+  }
+}
+@media (max-width: 500px) {
+  #desconto {
+    padding: 1rem; /* Reduz o padding para telas muito pequenas */
+  }
+  #desconto h4 {
+    font-family: "Krona One", sans-serif;
+    font-size: 1.4rem;
+    color: #0C0421;
+    /* Diminuindo o tamanho do título */
+  }
+  #desconto p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: #0C0421;
+    /* Diminuindo o tamanho do texto */
+  }
+}
+#contatos {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column; /* Muda a direção para coluna em telas menores */
+  align-items: center; /* Centraliza os itens */
+  gap: 2rem;
+}
+#contatos .contatos-imgs {
+  max-width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+#contatos .contatos-imgs img {
+  width: 100%;
+}
+#contatos .contatos-imgs img:nth-child(n+2) {
+  width: 48%; /* Mantém a largura da segunda imagem em diante */
+}
+#contatos .contatos-form {
+  max-width: 50%;
+  background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+}
+#contatos .contatos-form .titulo {
+  font-family: "Krona One", sans-serif;
+  font-size: 1.9rem;
+  color: #4e75ff;
+}
+#contatos .contatos-form .infos, #contatos .contatos-form .inputs .form-group label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #0C0421;
+}
+#contatos .contatos-form .inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  align-self: stretch;
+}
+#contatos .contatos-form .inputs input, #contatos .contatos-form .inputs .form-group textarea {
+  border-radius: 25px;
+  padding: 1rem;
+  border: none;
+}
+#contatos .contatos-form .inputs .form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#contatos .contatos-form .inputs .form-group label {
+  font-weight: bold;
+}
+#contatos .contatos-form .inputs .btn {
+  background-color: #4e75ff;
+  font-family: "Montserrat", sans-serif;
+  color: #E8F5C8;
+  border-radius: 30px;
+  font-weight: 500px;
+  width: 16em;
+  height: 4em;
+  font-size: 1.4em;
+  padding: 14px;
+  border: none;
+  cursor: pointer; /* Muda o cursor para um ponteiro */
+}
+#contatos .contatos-form .inputs .btn:hover {
+  background: #4e75ff;
+  transform: scale(1.1);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  #contatos {
+    flex-direction: column; /* Mantém a direção como coluna para telas menores */
+  }
+  #contatos .contatos-imgs, #contatos .contatos-form {
+    max-width: 90%; /* Aumenta a largura máxima em telas menores */
+  }
+}
+@media (max-width: 500px) {
+  #contatos .contatos-imgs img {
+    width: 100%; /* Imagens ocupam 100% da largura em telas pequenas */
+  }
+  #contatos .contatos-imgs img:nth-child(n+2) {
+    width: 100%; /* Garante que todas as imagens ocupem 100% */
+  }
+  #contatos .contatos-form {
+    padding: 1.5rem; /* Reduz o padding em telas pequenas */
+  }
+  #contatos .contatos-form .titulo {
+    font-family: "Krona One", sans-serif;
+    font-size: 1.6rem;
+    color: #4e75ff;
+    /* Diminui o tamanho do título */
+  }
+  #contatos .contatos-form .infos, #contatos .contatos-form .inputs .form-group label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: #0C0421;
+    /* Diminui o tamanho do texto */
+  }
+}
+footer {
+  background: #E8F5C8;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #0C0421;
+}/*# sourceMappingURL=styles.css.map */
