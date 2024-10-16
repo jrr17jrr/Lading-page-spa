@@ -46,6 +46,11 @@
             border: none;
             padding: 0;
             transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+            &:hover {
+                background: variaveis.$cor-secundaria;
+                transform: scale(1.1);
+            }
 
             
         }

@@ -400,6 +400,11 @@ header #home .img-home img {
   border: none;
   padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+#desconto .input-btn button:hover {
+  background: #4e75ff;
+  transform: scale(1.1);
 }
 
 @media (max-width: 1135px) {
@@ -447,9 +452,10 @@ header #home .img-home img {
   margin: 0 auto;
   width: 80%;
   display: flex;
-  flex-direction: column; /* Muda a direção para coluna em telas menores */
-  align-items: center; /* Centraliza os itens */
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
+  flex-direction: column;
 }
 #contatos .contatos-imgs {
   max-width: 50%;
@@ -463,10 +469,10 @@ header #home .img-home img {
   width: 100%;
 }
 #contatos .contatos-imgs img:nth-child(n+2) {
-  width: 48%; /* Mantém a largura da segunda imagem em diante */
+  width: 48%;
 }
 #contatos .contatos-form {
-  max-width: 50%;
+  max-width: 100%;
   background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
   padding: 2rem 3rem;
   border-radius: 2rem;
@@ -487,8 +493,9 @@ header #home .img-home img {
   align-items: flex-start;
   gap: 1.5rem;
   align-self: stretch;
+  width: 100%;
 }
-#contatos .contatos-form .inputs input, #contatos .contatos-form .inputs .form-group textarea {
+#contatos .contatos-form .inputs input, #contatos .contatos-form .inputs .btn, #contatos .contatos-form .inputs .form-group textarea {
   border-radius: 25px;
   padding: 1rem;
   border: none;
@@ -506,12 +513,10 @@ header #home .img-home img {
   background-color: #4e75ff;
   font-family: "Montserrat", sans-serif;
   color: #E8F5C8;
+  margin-top: 2rem;
   border-radius: 30px;
-  font-weight: 500px;
-  width: 16em;
-  height: 4em;
-  font-size: 1.4em;
-  padding: 14px;
+  font-size: 1rem;
+  width: 100%;
   border: none;
   cursor: pointer;
 }
@@ -523,73 +528,54 @@ header #home .img-home img {
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
   #contatos {
-    flex-direction: column; /* Mantém a direção como coluna para telas menores */
+    flex-direction: column;
   }
-  #contatos .contatos-imgs, #contatos .contatos-form {
-    max-width: 90%; /* Aumenta a largura máxima em telas menores */
+  #contatos .contatos-imgs,
+  #contatos .contatos-form {
+    max-width: 90%;
   }
-  .btn-main:hover {
-    /* Em vez de remover o botão, redefina o comportamento do hover */
-    background-color: initial; /* Reseta a cor de fundo ao valor original */
-    color: initial; /* Reseta a cor do texto ao valor original */
-    cursor: default; /* Remove a mudança de cursor */
+  .btn {
+    width: 70%;
+    max-width: none;
+  }
+  .btn:hover {
+    background-color: initial;
+    color: initial;
+    cursor: default;
   }
 }
 @media (max-width: 500px) {
   #contatos .contatos-imgs img {
-    width: 100%; /* Imagens ocupam 100% da largura em telas pequenas */
+    width: 100%;
   }
   #contatos .contatos-imgs img:nth-child(n+2) {
-    width: 100%; /* Garante que todas as imagens ocupem 100% */
+    width: 100%;
   }
   #contatos .contatos-form {
-    padding: 1.5rem; /* Reduz o padding em telas pequenas */
+    padding: 1.5rem;
   }
   #contatos .contatos-form .titulo {
     font-family: "Krona One", sans-serif;
     font-size: 1.6rem;
     color: #4e75ff;
-    /* Diminui o tamanho do título */
   }
   #contatos .contatos-form .infos, #contatos .contatos-form .inputs .form-group label {
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     color: #0C0421;
-    /* Diminui o tamanho do texto */
-  }
-  #contatos .contatos-form .btn {
-    width: 80%; /* Botão ocupa toda a largura disponível no mobile */
-    max-width: none; /* Remove limite no mobile */
-    height: auto; /* Ajusta a altura */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0;
-  }
-  #contatos .contatos-form .btn:hover {
-    /* Em vez de remover o botão, redefina o comportamento do hover */
-    background-color: initial; /* Reseta a cor de fundo ao valor original */
-    color: initial; /* Reseta a cor do texto ao valor original */
-    cursor: default; /* Remove a mudança de cursor */
   }
 }
-@media (max-width: 480px) and (max-width: 480px) {
-  .btn {
-    width: 80%; /* O botão ocupa 80% da largura da tela */
-    padding: 0.8rem 1.2rem; /* Ajusta o padding de forma proporcional */
-    font-size: 0.9rem; /* Diminui um pouco mais o tamanho da fonte */
-    box-sizing: border-box; /* Garante que padding e bordas sejam inclusos no tamanho total */
+@media (max-width: 480px) {
+  #contatos .btn {
+    width: 80%;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 0 auto; /* Centraliza o botão */
-  }
-  .btn:hover {
-    /* Mantém o hover resetado para evitar comportamentos estranhos */
-    background-color: initial;
-    color: initial;
-    cursor: default;
+    margin: 0 auto;
   }
 }
 footer {
