@@ -10,10 +10,19 @@
         gap: 2rem;
         padding: 2rem 0;
 
+
+        #primeira-imagem {
+            width: 40vw; /* Define a largura da primeira imagem */
+            max-width: 500px; /* Limite máximo para a imagem */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+
+
         .imgs-espaco {
             width: 40vw; /* Responsivo: Ajusta a largura conforme a viewport */
             max-width: 500px; /* Limita a largura máxima */
             height: auto; /* Mantém a proporção da imagem */
+            
         }
 
         .espaco-textos {
@@ -67,11 +76,21 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
     #nosso-espaco {
         .detalhes {
             flex-direction: column; /* Coloca os itens em coluna para telas menores */
             text-align: center; /* Centraliza o texto */
+
+            &:nth-child(2) {
+                flex-direction: column;
+            }
+
+            #primeira-imagem {
+                width: 60vw; /* Ajusta a largura para telas menores */
+                max-width: 400px; /* Limita o tamanho máximo da imagem */
+                height: auto; /* Mantém a proporção correta */
+            }
 
             .imgs-espaco,
             .espaco-textos {
@@ -97,6 +116,13 @@
             flex-wrap: wrap;
             gap: 1rem; /* Reduz o espaçamento entre os elementos */
             padding: 1rem 0; /* Reduz o padding em telas muito pequenas */
+
+
+            #primeira-imagem {
+                width: 80vw; /* Ajusta a largura para telas muito pequenas */
+                max-width: 300px; /* Limita o tamanho máximo para telas pequenas */
+                height: auto; /* Mantém a proporção correta */
+            }
 
             .imgs-espaco,
             .espaco-textos {

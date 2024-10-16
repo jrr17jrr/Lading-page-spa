@@ -72,7 +72,7 @@ header #home .textos-home .btn-main {
   font-size: 1.4em;
   padding: 14px;
   border: none;
-  cursor: pointer; /* Muda o cursor para um ponteiro */
+  cursor: pointer;
 }
 header #home .textos-home .btn-main:hover {
   background: #4e75ff;
@@ -86,29 +86,50 @@ header #home .img-home img {
   width: 100%;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 880px) {
   header {
-    padding: 1.5rem; /* Reduz o padding do header em telas médias */
+    padding: 7rem; /* Reduz o padding do header em telas médias */
   }
   #home {
     flex-direction: row; /* Alinha itens em coluna em telas menores */
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
   }
   #home .textos-home h1 {
-    font-size: 5vw; /* Aumenta a responsividade do texto */
+    font-size: 100%; /* Aumenta a responsividade do texto */
   }
   #home .textos-home .btn-main {
     width: 80vw; /* Botão mais largo em telas menores */
   }
   #home .img-home {
-    max-width: 60vw; /* Ajusta o tamanho da imagem para telas médias */
+    max-width: 30vw; /* Ajusta o tamanho da imagem para telas médias */
+  }
+  .btn-main:hover {
+    /* Em vez de remover o botão, redefina o comportamento do hover */
+    background-color: initial; /* Reseta a cor de fundo ao valor original */
+    color: initial; /* Reseta a cor do texto ao valor original */
+    cursor: default; /* Remove a mudança de cursor */
   }
 }
 @media (max-width: 500px) {
   header {
-    padding: 1rem; /* Reduz ainda mais o padding em telas pequenas */
+    padding: 5rem; /* Reduz ainda mais o padding em telas pequenas */
     background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 0 0 0;
+  }
+  header nav ul {
+    align-items: center;
+    text-align: center;
+    padding: 0 0 0 0;
   }
   header #home {
     flex-direction: column; /* Coloca o texto acima da imagem */
@@ -124,6 +145,12 @@ header #home .img-home img {
     max-width: none; /* Remove limite no mobile */
     height: auto; /* Ajusta a altura */
   }
+  header #home .textos-home .btn-main:hover {
+    /* Em vez de remover o botão, redefina o comportamento do hover */
+    background-color: initial; /* Reseta a cor de fundo ao valor original */
+    color: initial; /* Reseta a cor do texto ao valor original */
+    cursor: default; /* Remove a mudança de cursor */
+  }
   header #home .img-home {
     display: block;
   }
@@ -135,6 +162,11 @@ header #home .img-home img {
   justify-content: space-around;
   gap: 2rem;
   padding: 2rem 0;
+}
+#nosso-espaco .detalhes #primeira-imagem {
+  width: 40vw; /* Define a largura da primeira imagem */
+  max-width: 500px; /* Limite máximo para a imagem */
+  height: auto; /* Mantém a proporção da imagem */
 }
 #nosso-espaco .detalhes .imgs-espaco, #nosso-espaco .detalhes .espaco-textos {
   width: 40vw; /* Responsivo: Ajusta a largura conforme a viewport */
@@ -185,10 +217,18 @@ header #home .img-home img {
     max-width: none; /* Remove limite de largura */
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   #nosso-espaco .detalhes {
     flex-direction: column; /* Coloca os itens em coluna para telas menores */
     text-align: center; /* Centraliza o texto */
+  }
+  #nosso-espaco .detalhes:nth-child(2) {
+    flex-direction: column;
+  }
+  #nosso-espaco .detalhes #primeira-imagem {
+    width: 60vw; /* Ajusta a largura para telas menores */
+    max-width: 400px; /* Limita o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção correta */
   }
   #nosso-espaco .detalhes .imgs-espaco,
   #nosso-espaco .detalhes .espaco-textos {
@@ -208,6 +248,11 @@ header #home .img-home img {
     flex-wrap: wrap;
     gap: 1rem; /* Reduz o espaçamento entre os elementos */
     padding: 1rem 0; /* Reduz o padding em telas muito pequenas */
+  }
+  #nosso-espaco .detalhes #primeira-imagem {
+    width: 80vw; /* Ajusta a largura para telas muito pequenas */
+    max-width: 300px; /* Limita o tamanho máximo para telas pequenas */
+    height: auto; /* Mantém a proporção correta */
   }
   #nosso-espaco .detalhes .imgs-espaco,
   #nosso-espaco .detalhes .espaco-textos {
@@ -314,12 +359,13 @@ header #home .img-home img {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   color: white;
-  width: 50%; /* Alterado para porcentagem */
+  width: 50%;
   height: 100%;
   background: #4e75ff;
   border-radius: 0 65px 65px 0;
   border: none;
-  padding: 0; /* Remove padding extra */
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @media (max-width: 1135px) {
@@ -430,7 +476,7 @@ header #home .img-home img {
   font-size: 1.4em;
   padding: 14px;
   border: none;
-  cursor: pointer; /* Muda o cursor para um ponteiro */
+  cursor: pointer;
 }
 #contatos .contatos-form .inputs .btn:hover {
   background: #4e75ff;
@@ -444,6 +490,12 @@ header #home .img-home img {
   }
   #contatos .contatos-imgs, #contatos .contatos-form {
     max-width: 90%; /* Aumenta a largura máxima em telas menores */
+  }
+  .btn-main:hover {
+    /* Em vez de remover o botão, redefina o comportamento do hover */
+    background-color: initial; /* Reseta a cor de fundo ao valor original */
+    color: initial; /* Reseta a cor do texto ao valor original */
+    cursor: default; /* Remove a mudança de cursor */
   }
 }
 @media (max-width: 500px) {
@@ -467,6 +519,17 @@ header #home .img-home img {
     font-size: 1rem;
     color: #0C0421;
     /* Diminui o tamanho do texto */
+  }
+  #contatos .contatos-form .btn {
+    width: 100%; /* Botão ocupa toda a largura disponível no mobile */
+    max-width: none; /* Remove limite no mobile */
+    height: auto; /* Ajusta a altura */
+  }
+  #contatos .contatos-form .btn:hover {
+    /* Em vez de remover o botão, redefina o comportamento do hover */
+    background-color: initial; /* Reseta a cor de fundo ao valor original */
+    color: initial; /* Reseta a cor do texto ao valor original */
+    cursor: default; /* Remove a mudança de cursor */
   }
 }
 footer {

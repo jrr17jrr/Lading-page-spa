@@ -54,7 +54,7 @@ header {
                 font-family: variaveis.$ft-titulos;
 
                 span {
-                    color: variaveis.$cor-secundaria;
+                    color:variaveis.$cor-secundaria;
                 }
             }
 
@@ -87,19 +87,23 @@ header {
     }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 880px) {
     header {
-        padding: 1.5rem; /* Reduz o padding do header em telas médias */
+        padding: 7rem; /* Reduz o padding do header em telas médias */
     }
 
     #home {
         flex-direction: row; /* Alinha itens em coluna em telas menores */
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        text-align: center;
 
         .textos-home {
             h1 {
-                font-size: 5vw; /* Aumenta a responsividade do texto */
+                font-size: 100%; /* Aumenta a responsividade do texto */
+                
+                
             }
 
             .btn-main {
@@ -108,15 +112,42 @@ header {
         }
 
         .img-home {
-            max-width: 60vw; /* Ajusta o tamanho da imagem para telas médias */
+            max-width: 30vw; /* Ajusta o tamanho da imagem para telas médias */
+        }
+    }
+
+
+    .btn-main {
+       
+        &:hover {
+            /* Em vez de remover o botão, redefina o comportamento do hover */
+            background-color: initial; /* Reseta a cor de fundo ao valor original */
+            color: initial; /* Reseta a cor do texto ao valor original */
+            cursor: default; /* Remove a mudança de cursor */
         }
     }
 }
 
 @media (max-width: 500px) {
     header {
-        padding: 1rem; /* Reduz ainda mais o padding em telas pequenas */
+        padding: 5rem; /* Reduz ainda mais o padding em telas pequenas */
         background: variaveis.$gradiente-primario;
+
+        nav{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 0 0 0;
+
+            ul{
+                align-items: center;
+                text-align: center;
+                padding: 0 0 0 0;
+                
+            }
+        }
 
         #home {
             flex-direction: column; /* Coloca o texto acima da imagem */
@@ -132,6 +163,13 @@ header {
                     width: 100%; /* Botão ocupa toda a largura disponível no mobile */
                     max-width: none; /* Remove limite no mobile */
                     height: auto; /* Ajusta a altura */
+
+                    &:hover {
+                        /* Em vez de remover o botão, redefina o comportamento do hover */
+                        background-color: initial; /* Reseta a cor de fundo ao valor original */
+                        color: initial; /* Reseta a cor do texto ao valor original */
+                        cursor: default; /* Remove a mudança de cursor */
+                    }
                 }
             }
 

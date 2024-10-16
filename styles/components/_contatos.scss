@@ -91,6 +91,17 @@
             max-width: 90%; /* Aumenta a largura máxima em telas menores */
         }
     }
+
+    .btn-main {
+      
+
+        &:hover {
+            /* Em vez de remover o botão, redefina o comportamento do hover */
+            background-color: initial; /* Reseta a cor de fundo ao valor original */
+            color: initial; /* Reseta a cor do texto ao valor original */
+            cursor: default; /* Remove a mudança de cursor */
+        }
+    }
 }
 
 @media (max-width: 500px) {
@@ -114,6 +125,20 @@
             .infos {
                 @include mixins.ff-fs-cl(variaveis.$ft-textos, 1rem, variaveis.$cor-primaria); /* Diminui o tamanho do texto */
             }
+
+            .btn{
+                width: 100%; /* Botão ocupa toda a largura disponível no mobile */
+                max-width: none; /* Remove limite no mobile */
+                height: auto; /* Ajusta a altura */    
+    
+                &:hover {
+                    /* Em vez de remover o botão, redefina o comportamento do hover */
+                    background-color: initial; /* Reseta a cor de fundo ao valor original */
+                    color: initial; /* Reseta a cor do texto ao valor original */
+                    cursor: default; /* Remove a mudança de cursor */
+                }
+            }
+
         }
     }
 }

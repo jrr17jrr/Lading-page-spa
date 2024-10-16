@@ -39,21 +39,20 @@
 
         button {
             @include mixins.ff-fs-cl(variaveis.$ft-textos, 1.2rem, white);
-            width: 50%; /* Alterado para porcentagem */
+            width: 50%;
             height: 100%;
             background: variaveis.$cor-secundaria;
             border-radius: 0 65px 65px 0;
             border: none;
-            padding: 0; /* Remove padding extra */
-            transition: background-color 0.3s ease; /* Adiciona uma transição suave para o hover */
-        
-            &:hover {
-                background-color: variaveis.$cor-primaria; /* Cor de fundo ao passar o mouse */
-                cursor: pointer; /* Mostra o cursor de link ao passar o mouse */
-            }
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            
         }
     }
 }
+
+
 
 @media (max-width:1135px){
     #desconto{

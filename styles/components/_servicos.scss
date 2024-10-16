@@ -1,5 +1,5 @@
-@use '../abstract/variaveis';
 @use '../abstract/mixins';
+@use '../abstract/variaveis';
 
 #servico {
     background: variaveis.$gradiente-primario;
