@@ -1,8 +1,9 @@
 @charset "UTF-8";
-body {
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  height: 100vh; /* Ocupa 100% da altura da viewport */
+  width: 100vw; /* Ocupa 100% da largura da viewport */
 }
 
 header {
