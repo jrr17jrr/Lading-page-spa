@@ -3,42 +3,51 @@
 
 #nosso-espaco {
     .detalhes {
-        width: 100%;
-        display: inline-flex;
+        width: 80%;
+        display: flex;
         align-items: center;
-        justify-content: space-around;
-        gap: 2rem;
-        padding: 2rem 0;
+        justify-content: center;
+        gap: 2em;
+        padding: 5rem 0;
+        margin-left: 15em;
+        
+        
 
 
-        #primeira-imagem {
+        .img-espaco1{
             width: 40vw; /* Define a largura da primeira imagem */
             max-width: 500px; /* Limite máximo para a imagem */
-            height: auto; /* Mantém a proporção da imagem */
-        }
-
-
-        .imgs-espaco {
-            width: 40vw; /* Responsivo: Ajusta a largura conforme a viewport */
-            max-width: 500px; /* Limita a largura máxima */
             height: auto; /* Mantém a proporção da imagem */
             
         }
 
+
+        .imgs-espaco2 {
+            width: 40vw; /* Responsivo: Ajusta a largura conforme a viewport */
+            max-width: 500px; /* Limita a largura máxima */
+            height: auto; /* Mantém a proporção da imagem */
+            margin: 5em;
+            
+            
+            
+        }
+
         .espaco-textos {
-            @extend .imgs-espaco; /* Se preferir, remova isso, pois pode causar duplicidade */
+           
             flex: 1; /* Permite que os textos ocupem o espaço restante */
             .titulo {
-                @include mixins.ff-fs-cl(variaveis.$ft-titulos, 2.4em, variaveis.$cor-secundaria); /* Responsivo */
+                @include mixins.ff-fs-cl(variaveis.$ft-titulos, 2em, variaveis.$cor-secundaria); /* Responsivo */
                 font-weight: 500;
+                flex-wrap: wrap
             }
 
             .infos {
-                @include mixins.ff-fs-cl(variaveis.$ft-textos, 1.5em, variaveis.$cor-primaria); /* Responsivo */
+                @include mixins.ff-fs-cl(variaveis.$ft-textos, 1.1em, variaveis.$cor-primaria); /* Responsivo */
+                flex-wrap: wrap;
             }
 
             .separador {
-                width: 100%;
+                width: 80%;
             }
         }
 
@@ -48,34 +57,43 @@
     }
 }
 
-@media (max-width: 1200px) {
-    .detalhes {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-      
+@media (max-width: 1280px) {
+    #nosso-espaco{
 
-        .espaco-textos {
-            margin: 0 5em;
-        }
-
-        .imgs-espaco {
-            width: 20vw; /* Responsivo: Ajusta a largura conforme a viewport */
-            max-width: 500px; /* Limita a largura máxima */
-            height: auto; /* Mantém a proporção da imagem */
-            margin: 0 5em;
-        }
-
-        
-
-
-        .imgs-espaco {
-            width: 70vw; /* Ajusta a largura para telas médias */
-            max-width: none; /* Remove limite de largura */
+        .detalhes {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            text-align: center; /* Centraliza o texto */
+            &:nth-child(2) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .espaco-textos {
+                margin: 0 5em;
+            }
+            
+            .imgs-espaco {
+                width: 20vw; /* Responsivo: Ajusta a largura conforme a viewport */
+                max-width: 500px; /* Limita a largura máxima */
+                height: auto; /* Mantém a proporção da imagem */
+                margin: 0 5em;
+            }
+            
+            
+            
+            
+            .imgs-espaco {
+                width: 70vw; /* Ajusta a largura para telas médias */
+                max-width: none; /* Remove limite de largura */
+            }
         }
     }
 }
-
+    
 @media (max-width: 880px) {
     #nosso-espaco {
         .detalhes {
@@ -86,7 +104,7 @@
                 flex-direction: column;
             }
 
-            #primeira-imagem {
+            .img-espaco1{
                 width: 60vw; /* Ajusta a largura para telas menores */
                 max-width: 400px; /* Limita o tamanho máximo da imagem */
                 height: auto; /* Mantém a proporção correta */
@@ -118,7 +136,7 @@
             padding: 1rem 0; /* Reduz o padding em telas muito pequenas */
 
 
-            #primeira-imagem {
+            .img-espaco1{
                 width: 80vw; /* Ajusta a largura para telas muito pequenas */
                 max-width: 300px; /* Limita o tamanho máximo para telas pequenas */
                 height: auto; /* Mantém a proporção correta */
@@ -139,6 +157,42 @@
 
 
             }
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    #nosso-espaco {
+        .detalhes {
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 1rem; /* Reduz o espaçamento entre os elementos */
+            padding: 1rem 0; /* Reduz o padding em telas muito pequenas */
+
+
+            .img-espaco1{
+                width: 80vw; /* Ajusta a largura para telas muito pequenas */
+                max-width: 300px; /* Limita o tamanho máximo para telas pequenas */
+                height: auto; /* Mantém a proporção correta */
+            }
+
+            .imgs-espaco,
+            .espaco-textos {
+                width: 80vw; /* Ocupa a maior parte da tela em telas pequenas */
+                margin: 0;
+            }
+
+            .titulo {
+                font-size: 150em; /* Tamanho de fonte ainda menor para telas muito pequenas */
+            }
+
+            .infos {
+                font-size: 5em; /* Tamanho de fonte ajustado para infos */
+
+            }
+        
         }
     }
 }

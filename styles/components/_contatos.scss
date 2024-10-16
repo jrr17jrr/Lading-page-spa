@@ -127,9 +127,13 @@
             }
 
             .btn{
-                width: 100%; /* Botão ocupa toda a largura disponível no mobile */
+                width: 80%; /* Botão ocupa toda a largura disponível no mobile */
                 max-width: none; /* Remove limite no mobile */
                 height: auto; /* Ajusta a altura */    
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin: 0;
     
                 &:hover {
                     /* Em vez de remover o botão, redefina o comportamento do hover */
@@ -141,4 +145,29 @@
 
         }
     }
+}
+
+@media (max-width: 480px) {
+
+    @media (max-width: 480px) {
+        .btn {
+            width: 80%; /* O botão ocupa 80% da largura da tela */
+            padding: 0.8rem 1.2rem; /* Ajusta o padding de forma proporcional */
+            font-size: 0.9rem; /* Diminui um pouco mais o tamanho da fonte */
+            box-sizing: border-box; /* Garante que padding e bordas sejam inclusos no tamanho total */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto; /* Centraliza o botão */
+        }
+        
+        .btn:hover {
+            /* Mantém o hover resetado para evitar comportamentos estranhos */
+            background-color: initial;
+            color: initial;
+            cursor: default;
+        }
+    }
+
 }

@@ -156,63 +156,73 @@ header #home .img-home img {
   }
 }
 #nosso-espaco .detalhes {
-  width: 100%;
-  display: inline-flex;
+  width: 80%;
+  display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 2rem;
-  padding: 2rem 0;
+  justify-content: center;
+  gap: 2em;
+  padding: 5rem 0;
+  margin-left: 15em;
 }
-#nosso-espaco .detalhes #primeira-imagem {
+#nosso-espaco .detalhes .img-espaco1 {
   width: 40vw; /* Define a largura da primeira imagem */
   max-width: 500px; /* Limite máximo para a imagem */
   height: auto; /* Mantém a proporção da imagem */
 }
-#nosso-espaco .detalhes .imgs-espaco, #nosso-espaco .detalhes .espaco-textos {
+#nosso-espaco .detalhes .imgs-espaco2 {
   width: 40vw; /* Responsivo: Ajusta a largura conforme a viewport */
   max-width: 500px; /* Limita a largura máxima */
   height: auto; /* Mantém a proporção da imagem */
+  margin: 5em;
 }
 #nosso-espaco .detalhes .espaco-textos {
-  /* Se preferir, remova isso, pois pode causar duplicidade */
   flex: 1; /* Permite que os textos ocupem o espaço restante */
 }
 #nosso-espaco .detalhes .espaco-textos .titulo {
   font-family: "Krona One", sans-serif;
-  font-size: 2.4em;
+  font-size: 2em;
   color: #4e75ff;
   /* Responsivo */
   font-weight: 500;
+  flex-wrap: wrap;
 }
 #nosso-espaco .detalhes .espaco-textos .infos {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.1em;
   color: #0C0421;
   /* Responsivo */
+  flex-wrap: wrap;
 }
 #nosso-espaco .detalhes .espaco-textos .separador {
-  width: 100%;
+  width: 80%;
 }
 #nosso-espaco .detalhes:nth-child(2) {
   flex-direction: row-reverse;
 }
 
-@media (max-width: 1200px) {
-  .detalhes {
-    flex-direction: row;
+@media (max-width: 1280px) {
+  #nosso-espaco .detalhes {
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: auto;
+    text-align: center; /* Centraliza o texto */
   }
-  .detalhes .espaco-textos {
+  #nosso-espaco .detalhes:nth-child(2) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #nosso-espaco .detalhes .espaco-textos {
     margin: 0 5em;
   }
-  .detalhes .imgs-espaco, #nosso-espaco .detalhes .espaco-textos {
+  #nosso-espaco .detalhes .imgs-espaco {
     width: 20vw; /* Responsivo: Ajusta a largura conforme a viewport */
     max-width: 500px; /* Limita a largura máxima */
     height: auto; /* Mantém a proporção da imagem */
     margin: 0 5em;
   }
-  .detalhes .imgs-espaco, #nosso-espaco .detalhes .espaco-textos {
+  #nosso-espaco .detalhes .imgs-espaco {
     width: 70vw; /* Ajusta a largura para telas médias */
     max-width: none; /* Remove limite de largura */
   }
@@ -225,7 +235,7 @@ header #home .img-home img {
   #nosso-espaco .detalhes:nth-child(2) {
     flex-direction: column;
   }
-  #nosso-espaco .detalhes #primeira-imagem {
+  #nosso-espaco .detalhes .img-espaco1 {
     width: 60vw; /* Ajusta a largura para telas menores */
     max-width: 400px; /* Limita o tamanho máximo da imagem */
     height: auto; /* Mantém a proporção correta */
@@ -249,7 +259,7 @@ header #home .img-home img {
     gap: 1rem; /* Reduz o espaçamento entre os elementos */
     padding: 1rem 0; /* Reduz o padding em telas muito pequenas */
   }
-  #nosso-espaco .detalhes #primeira-imagem {
+  #nosso-espaco .detalhes .img-espaco1 {
     width: 80vw; /* Ajusta a largura para telas muito pequenas */
     max-width: 300px; /* Limita o tamanho máximo para telas pequenas */
     height: auto; /* Mantém a proporção correta */
@@ -257,6 +267,30 @@ header #home .img-home img {
   #nosso-espaco .detalhes .imgs-espaco,
   #nosso-espaco .detalhes .espaco-textos {
     width: 90vw; /* Ocupa a maior parte da tela em telas pequenas */
+    margin: 0;
+  }
+  #nosso-espaco .detalhes .titulo {
+    font-size: 150em; /* Tamanho de fonte ainda menor para telas muito pequenas */
+  }
+  #nosso-espaco .detalhes .infos {
+    font-size: 5em; /* Tamanho de fonte ajustado para infos */
+  }
+}
+@media (max-width: 480px) {
+  #nosso-espaco .detalhes {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem; /* Reduz o espaçamento entre os elementos */
+    padding: 1rem 0; /* Reduz o padding em telas muito pequenas */
+  }
+  #nosso-espaco .detalhes .img-espaco1 {
+    width: 80vw; /* Ajusta a largura para telas muito pequenas */
+    max-width: 300px; /* Limita o tamanho máximo para telas pequenas */
+    height: auto; /* Mantém a proporção correta */
+  }
+  #nosso-espaco .detalhes .imgs-espaco,
+  #nosso-espaco .detalhes .espaco-textos {
+    width: 80vw; /* Ocupa a maior parte da tela em telas pequenas */
     margin: 0;
   }
   #nosso-espaco .detalhes .titulo {
@@ -379,7 +413,7 @@ header #home .img-home img {
 /* Media Queries para Responsividade */
 @media (max-width: 880px) {
   #desconto .desconto-form {
-    margin: 5em;
+    margin: 2em;
   }
   #desconto .input-btn {
     width: 100%; /* 100% da largura em telas menores */
@@ -524,15 +558,38 @@ header #home .img-home img {
     /* Diminui o tamanho do texto */
   }
   #contatos .contatos-form .btn {
-    width: 100%; /* Botão ocupa toda a largura disponível no mobile */
+    width: 80%; /* Botão ocupa toda a largura disponível no mobile */
     max-width: none; /* Remove limite no mobile */
     height: auto; /* Ajusta a altura */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
   }
   #contatos .contatos-form .btn:hover {
     /* Em vez de remover o botão, redefina o comportamento do hover */
     background-color: initial; /* Reseta a cor de fundo ao valor original */
     color: initial; /* Reseta a cor do texto ao valor original */
     cursor: default; /* Remove a mudança de cursor */
+  }
+}
+@media (max-width: 480px) and (max-width: 480px) {
+  .btn {
+    width: 80%; /* O botão ocupa 80% da largura da tela */
+    padding: 0.8rem 1.2rem; /* Ajusta o padding de forma proporcional */
+    font-size: 0.9rem; /* Diminui um pouco mais o tamanho da fonte */
+    box-sizing: border-box; /* Garante que padding e bordas sejam inclusos no tamanho total */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto; /* Centraliza o botão */
+  }
+  .btn:hover {
+    /* Mantém o hover resetado para evitar comportamentos estranhos */
+    background-color: initial;
+    color: initial;
+    cursor: default;
   }
 }
 footer {
