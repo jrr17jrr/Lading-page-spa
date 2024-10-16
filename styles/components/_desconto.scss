@@ -66,8 +66,13 @@
 }
 
 /* Media Queries para Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 880px) {
     #desconto {
+
+        .desconto-form{
+            margin: 5em;
+        }
+
         .input-btn {
             width: 100%; /* 100% da largura em telas menores */
             max-width: 100%; /* Garante que não ultrapasse 100% */

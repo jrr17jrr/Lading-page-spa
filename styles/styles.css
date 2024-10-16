@@ -88,7 +88,7 @@ header #home .img-home img {
 
 @media (max-width: 880px) {
   header {
-    padding: 7rem; /* Reduz o padding do header em telas médias */
+    padding: 5rem; /* Reduz o padding do header em telas médias */
   }
   #home {
     flex-direction: row; /* Alinha itens em coluna em telas menores */
@@ -377,7 +377,10 @@ header #home .img-home img {
   }
 }
 /* Media Queries para Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 880px) {
+  #desconto .desconto-form {
+    margin: 5em;
+  }
   #desconto .input-btn {
     width: 100%; /* 100% da largura em telas menores */
     max-width: 100%; /* Garante que não ultrapasse 100% */
