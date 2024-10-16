@@ -88,7 +88,7 @@ header #home .img-home img {
 
 @media (max-width: 880px) {
   header {
-    padding: 5rem; /* Reduz o padding do header em telas médias */
+    padding: 2rem; /* Reduz o padding do header em telas médias */
   }
   #home {
     flex-direction: row; /* Alinha itens em coluna em telas menores */
@@ -115,7 +115,7 @@ header #home .img-home img {
 }
 @media (max-width: 500px) {
   header {
-    padding: 5rem; /* Reduz ainda mais o padding em telas pequenas */
+    padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
     background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
   }
   header nav {

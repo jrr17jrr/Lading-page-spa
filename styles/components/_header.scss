@@ -89,7 +89,7 @@ header {
 
 @media (max-width: 880px) {
     header {
-        padding: 5rem; /* Reduz o padding do header em telas médias */
+        padding: 2rem; /* Reduz o padding do header em telas médias */
     }
 
     #home {
@@ -130,7 +130,7 @@ header {
 
 @media (max-width: 500px) {
     header {
-        padding: 5rem; /* Reduz ainda mais o padding em telas pequenas */
+        padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
         background: variaveis.$gradiente-primario;
 
         nav{
