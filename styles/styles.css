@@ -5,6 +5,8 @@ html, body {
   height: 100vh; /* Ocupa 100% da altura da viewport */
   width: 100vw; /* Ocupa 100% da largura da viewport */
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 header {
