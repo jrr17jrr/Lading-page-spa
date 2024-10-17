@@ -137,13 +137,13 @@ header #home .img-home img {
     flex-direction: column; /* Coloca o texto acima da imagem */
   }
   header #home .textos-home {
-    width: 100%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
+    width: 80%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
   }
   header #home .textos-home h1 {
     font-size: 5vw; /* Aumenta o tamanho relativo do texto para telas menores */
   }
   header #home .textos-home .btn-main {
-    width: 100%; /* Botão ocupa toda a largura disponível no mobile */
+    width: 60%; /* Botão ocupa toda a largura disponível no mobile */
     max-width: none; /* Remove limite no mobile */
     height: auto; /* Ajusta a altura */
   }
@@ -157,7 +157,7 @@ header #home .img-home img {
     display: block;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   header {
     padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
   }
@@ -184,7 +184,7 @@ header #home .img-home img {
     font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
   }
   header #home .textos-home .btn-main {
-    width: 100%; /* Botão ocupa toda a largura disponível no mobile */
+    width: 80%; /* Botão ocupa toda a largura disponível no mobile */
     max-width: none; /* Remove limite no mobile */
     height: auto; /* Ajusta a altura */
   }
