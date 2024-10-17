@@ -121,12 +121,7 @@ header {
     }
 
 
-    .btn-main {
-       
-        &:hover {
-            cursor: default; /* Remove a mudança de cursor */
-        }
-    }
+    
 }
 
 @media (max-width: 700px) {
