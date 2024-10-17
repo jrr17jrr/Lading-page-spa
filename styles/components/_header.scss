@@ -123,6 +123,8 @@ header {
                 &:hover {
                     background-color: variaveis.$cor-primaria!important; /* Mantenha a cor de fundo ao passar o mouse */
                     color: white!important; /* Altere a cor do texto ao passar o mouse */
+                    transform: scale(1.0)!important;
+    
                 }
             }
         }
@@ -174,6 +176,8 @@ header {
                     &:hover {
                         background-color: variaveis.$cor-secundaria !important; /* Cor ao passar o mouse */
                         color: white !important; /* Altere a cor do texto ao passar o mouse */
+                        transform: scale(1.0)!important;
+                        
                     }
                 }
             }
@@ -224,6 +228,8 @@ header {
                     &:hover {
                         background-color: variaveis.$cor-secundaria !important; /* Cor ao passar o mouse */
                         color: white !important; /* Altere a cor do texto ao passar o mouse */
+                        transform: scale(1.0)!important;
+                        
                     }
                 }
             }

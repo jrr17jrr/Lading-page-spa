@@ -112,6 +112,7 @@ header #home .img-home img {
   #home .textos-home .btn-main:hover {
     background-color: #0C0421 !important; /* Mantenha a cor de fundo ao passar o mouse */
     color: white !important; /* Altere a cor do texto ao passar o mouse */
+    transform: scale(1) !important;
   }
   .img-home {
     max-width: 30vw; /* Ajusta o tamanho da imagem para telas médias */
@@ -151,6 +152,7 @@ header #home .img-home img {
   header #home .textos-home .btn-main:hover {
     background-color: #4e75ff !important; /* Cor ao passar o mouse */
     color: white !important; /* Altere a cor do texto ao passar o mouse */
+    transform: scale(1) !important;
   }
   header #home .img-home {
     display: block;
@@ -190,6 +192,7 @@ header #home .img-home img {
   header #home .textos-home .btn-main:hover {
     background-color: #4e75ff !important; /* Cor ao passar o mouse */
     color: white !important; /* Altere a cor do texto ao passar o mouse */
+    transform: scale(1) !important;
   }
   header #home .img-home {
     display: block;
@@ -586,6 +589,10 @@ header #home .img-home img {
     padding: 2rem 3rem;
     border-radius: 2rem;
   }
+  .contatos-form .btn:hover {
+    background: #4e75ff;
+    transform: scale(1.1);
+  }
 }
 @media (max-width: 1400px) {
   #contatos .contatos-imgs {
@@ -608,6 +615,10 @@ header #home .img-home img {
     padding: 2rem 3rem;
     border-radius: 2rem;
   }
+  .contatos-form .btn:hover {
+    background: #4e75ff;
+    transform: scale(1.1);
+  }
 }
 @media (max-width: 1300px) {
   #contatos .contatos-imgs {
@@ -629,6 +640,10 @@ header #home .img-home img {
     background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
     padding: 2rem 3rem;
     border-radius: 2rem;
+  }
+  .contatos-form .btn:hover {
+    background: #4e75ff;
+    transform: scale(1.1);
   }
 }
 @media (max-width: 1100px) {
@@ -689,9 +704,8 @@ header #home .img-home img {
     max-width: none;
   }
   .btn:hover {
-    background-color: initial;
-    color: initial;
-    cursor: default;
+    background: #4e75ff;
+    transform: scale(1);
   }
 }
 @media (max-width: 500px) {

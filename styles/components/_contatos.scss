@@ -118,8 +118,17 @@
         background: variaveis.$gradiente-primario;
         padding: 2rem 3rem;
         border-radius: 2rem;
+        .btn {
+
+            &:hover {
+                background: variaveis.$cor-secundaria;
+                transform: scale(1.1);
+            }    
+        }
     }
 }
+
+                
 
 
 @media (max-width: 1400px) {
@@ -146,6 +155,15 @@
         background: variaveis.$gradiente-primario;
         padding: 2rem 3rem;
         border-radius: 2rem;
+    
+        .btn {
+
+            &:hover {
+                background: variaveis.$cor-secundaria;
+                transform: scale(1.1);
+            }    
+        }
+
     }
 }
 
@@ -174,6 +192,13 @@
         background: variaveis.$gradiente-primario;
         padding: 2rem 3rem;
         border-radius: 2rem;
+        .btn {
+
+            &:hover {
+                background: variaveis.$cor-secundaria;
+                transform: scale(1.1);
+            }    
+        }
     }
 }
 
@@ -249,9 +274,9 @@
         max-width: none; // Remove limite no mobile
 
         &:hover {
-            background-color: initial; // Reseta a cor de fundo ao valor original
-            color: initial; // Reseta a cor do texto ao valor original
-            cursor: default; // Remove a mudança de cursor
+            background: variaveis.$cor-secundaria;
+            transform: scale(1.0);
+                
         }
     }
 }
