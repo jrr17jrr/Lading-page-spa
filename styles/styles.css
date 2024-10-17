@@ -200,6 +200,48 @@ header #home .img-home img {
     display: block;
   }
 }
+@media (max-width: 320px) {
+  header {
+    padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
+    background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 0 0 0;
+  }
+  header nav ul {
+    align-items: center;
+    text-align: center;
+    padding: 0 0 0 0;
+  }
+  header #home {
+    flex-direction: column; /* Coloca o texto acima da imagem */
+  }
+  header #home .textos-home {
+    width: 100%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
+  }
+  header #home .textos-home h1 {
+    font-size: 7vw; /* Aumenta o tamanho relativo do texto para telas menores */
+  }
+  header #home .textos-home .btn-main {
+    width: 100%; /* Botão ocupa toda a largura disponível no mobile */
+    max-width: none; /* Remove limite no mobile */
+    height: auto; /* Ajusta a altura */
+  }
+  header #home .textos-home .btn-main:hover {
+    /* Em vez de remover o botão, redefina o comportamento do hover */
+    background-color: initial; /* Reseta a cor de fundo ao valor original */
+    color: initial; /* Reseta a cor do texto ao valor original */
+    cursor: default; /* Remove a mudança de cursor */
+  }
+  header #home .img-home {
+    display: block;
+  }
+}
 #nosso-espaco .detalhes {
   width: 80%;
   display: flex;
