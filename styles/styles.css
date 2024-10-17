@@ -103,12 +103,12 @@ header #home .img-home img {
     font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
   }
   #home .textos-home .btn-main {
-    background-color: rgb(173, 0, 0);
-    width: 80vw; /* Botão mais largo em telas menores */
-    cursor: none;
+    background-color: black !important;
   }
   #home .textos-home .btn-main:hover {
-    transform: scale(1.1);
+    background-color: initial !important;
+    color: initial !important;
+    cursor: default !important;
   }
   .img-home {
     max-width: 30vw; /* Ajusta o tamanho da imagem para telas médias */
