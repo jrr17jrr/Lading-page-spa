@@ -7,7 +7,7 @@ body {
 
 header {
   background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
-  padding: 2rem; /* Padding inicial */
+  padding: 2rem;
 }
 header nav {
   display: flex;
@@ -47,19 +47,16 @@ header #home {
   justify-content: space-between;
 }
 header #home .textos-home {
-  width: 100%; /* Ajusta a largura para ser responsiva */
+  width: 100%;
 }
 header #home .textos-home h1 {
-  font-size: 3vw; /* Ajusta o tamanho do texto proporcional à largura da tela */
+  font-size: 3vw;
   color: #0C0421;
   margin-bottom: 2rem;
   font-family: "Krona One", sans-serif;
 }
 header #home .textos-home h1 span {
   color: #4e75ff;
-}
-header #home .textos-home ahover {
-  font-weight: bold;
 }
 header #home .textos-home .btn-main {
   background-color: #4e75ff;
@@ -77,9 +74,13 @@ header #home .textos-home .btn-main {
 header #home .textos-home .btn-main:hover {
   transform: scale(1.1);
 }
+header #home .textos-home .btn-main:focus, header #home .textos-home .btn-main:active {
+  background-color: #4e75ff; /* Defina uma cor ao focar ou clicar */
+  outline: none; /* Remove o contorno padrão, se necessário */
+}
 header #home .img-home {
-  max-width: 50vw; /* Ajusta a largura da imagem proporcionalmente */
-  max-width: 474px; /* Define um limite máximo */
+  max-width: 50vw;
+  max-width: 474px;
 }
 header #home .img-home img {
   width: 100%;
@@ -87,113 +88,60 @@ header #home .img-home img {
 
 @media (max-width: 880px) {
   header {
-    padding: 2rem; /* Reduz o padding do header em telas médias */
+    padding: 2rem;
   }
   #home {
-    flex-direction: row; /* Alinha itens em coluna em telas menores */
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    flex-direction: column; /* Coloca o texto acima da imagem */
     text-align: center;
   }
   #home .textos-home {
-    width: 100%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
+    width: 100%;
   }
   #home .textos-home h1 {
-    font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
+    font-size: 6vw;
   }
   #home .textos-home .btn-main {
-    background-color: black !important;
+    background-color: black; /* Cor diferente em telas menores */
   }
   #home .textos-home .btn-main:hover {
-    background-color: black !important;
-    color: initial !important;
-    cursor: default !important;
+    background-color: #0C0421; /* Mantenha a cor de fundo ao passar o mouse */
+    color: white; /* Altere a cor do texto ao passar o mouse */
   }
-  .img-home {
-    max-width: 30vw; /* Ajusta o tamanho da imagem para telas médias */
+  #home .img-home {
+    max-width: 30vw;
   }
 }
 @media (max-width: 700px) {
-  header {
-    padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
+  #home .textos-home {
+    width: 80%;
   }
-  header nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 0 0 0;
+  #home .textos-home h1 {
+    font-size: 5vw;
   }
-  header nav ul {
-    align-items: center;
-    text-align: center;
-    padding: 0 0 0 0;
-  }
-  header #home {
-    flex-direction: column; /* Coloca o texto acima da imagem */
-  }
-  header #home .textos-home {
-    width: 80%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
-  }
-  header #home .textos-home h1 {
-    font-size: 5vw; /* Aumenta o tamanho relativo do texto para telas menores */
-  }
-  header #home .textos-home .btn-main {
-    width: 60%; /* Botão ocupa toda a largura disponível no mobile */
-    max-width: none; /* Remove limite no mobile */
-    height: auto; /* Ajusta a altura */
-  }
-  header #home .textos-home .btn-main:hover {
-    /* Em vez de remover o botão, redefina o comportamento do hover */
-    background-color: initial; /* Reseta a cor de fundo ao valor original */
-    color: initial; /* Reseta a cor do texto ao valor original */
-    cursor: default; /* Remove a mudança de cursor */
-  }
-  header #home .img-home {
-    display: block;
+  #home .textos-home .btn-main {
+    width: 60%;
+    max-width: none;
+    height: auto;
   }
 }
 @media (max-width: 500px) {
   header {
-    padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
+    padding: 2rem;
   }
-  header nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 0 0 0;
+  #home .textos-home {
+    width: 100%;
   }
-  header nav ul {
-    align-items: center;
-    text-align: center;
-    padding: 0 0 0 0;
+  #home .textos-home h1 {
+    font-size: 6vw;
   }
-  header #home {
-    flex-direction: column; /* Coloca o texto acima da imagem */
-  }
-  header #home .textos-home {
-    width: 100%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
-  }
-  header #home .textos-home h1 {
-    font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
-  }
-  header #home .textos-home .btn-main {
+  #home .textos-home .btn-main {
     width: 80%; /* Botão ocupa toda a largura disponível no mobile */
-    max-width: none; /* Remove limite no mobile */
-    height: auto; /* Ajusta a altura */
+    max-width: none;
+    height: auto;
   }
-  header #home .textos-home .btn-main:hover {
-    /* Em vez de remover o botão, redefina o comportamento do hover */
-    background-color: initial; /* Reseta a cor de fundo ao valor original */
-    color: initial; /* Reseta a cor do texto ao valor original */
-    cursor: default; /* Remove a mudança de cursor */
-  }
-  header #home .img-home {
-    display: block;
+  #home .textos-home .btn-main:hover {
+    background-color: #4e75ff; /* Cor ao passar o mouse */
+    color: white; /* Altere a cor do texto ao passar o mouse */
   }
 }
 #nosso-espaco .detalhes {

@@ -3,7 +3,7 @@
 
 header {
     background: variaveis.$gradiente-primario;
-    padding: 2rem; /* Padding inicial */
+    padding: 2rem;
 
     nav {
         display: flex;
@@ -28,7 +28,7 @@ header {
                 text-decoration: none;
                 @include mixins.ff-fs-cl(variaveis.$ft-textos, 1rem, variaveis.$cor-primaria);
                 font-weight: 500;
-                transition: .3s;
+                transition: 0.3s;
                 &:hover {
                     transform: scale(1.2);
                     font-weight: 700;
@@ -45,39 +45,37 @@ header {
         justify-content: space-between;
 
         .textos-home {
-            width: 100%; /* Ajusta a largura para ser responsiva */
+            width: 100%;
 
             h1 {
-                font-size: 3vw; /* Ajusta o tamanho do texto proporcional à largura da tela */
+                font-size: 3vw;
                 color: variaveis.$cor-primaria;
                 margin-bottom: 2rem;
                 font-family: variaveis.$ft-titulos;
 
                 span {
-                    color:variaveis.$cor-secundaria;
-                }
-            }
-
-            a{
-                &hover{
-                    font-weight: bold;
+                    color: variaveis.$cor-secundaria;
                 }
             }
 
             .btn-main {
                 @include mixins.botao;
-                                
 
                 &:hover {
-                    
                     transform: scale(1.1);
+                }
+
+                &:focus,
+                &:active {
+                    background-color: variaveis.$cor-secundaria; /* Defina uma cor ao focar ou clicar */
+                    outline: none; /* Remove o contorno padrão, se necessário */
                 }
             }
         }
 
         .img-home {
-            max-width: 50vw; /* Ajusta a largura da imagem proporcionalmente */
-            max-width: 474px; /* Define um limite máximo */
+            max-width: 50vw;
+            max-width: 474px;
 
             img {
                 width: 100%;
@@ -88,152 +86,77 @@ header {
 
 @media (max-width: 880px) {
     header {
-        padding: 2rem; /* Reduz o padding do header em telas médias */
+        padding: 2rem;
     }
 
     #home {
-        flex-direction: row; /* Alinha itens em coluna em telas menores */
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        flex-direction: column; /* Coloca o texto acima da imagem */
         text-align: center;
 
-
-
         .textos-home {
-             width: 100%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
+            width: 100%;
 
             h1 {
-                font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
-                
-                
+                font-size: 6vw;
             }
-
-
 
             .btn-main {
-                background-color: black !important;; // Cor diferente em telas menores
-               
+                background-color: black; /* Cor diferente em telas menores */
+
                 &:hover {
-                    background-color: black !important;; // Reseta a cor de fundo ao valor original
-                    color: initial !important;; // Reseta a cor do texto ao valor original
-                    cursor: default !important;; // Remove a mudança de cursor
+                    background-color: variaveis.$cor-primaria; /* Mantenha a cor de fundo ao passar o mouse */
+                    color: white; /* Altere a cor do texto ao passar o mouse */
                 }
             }
-        }
-
         }
 
         .img-home {
-            max-width: 30vw; /* Ajusta o tamanho da imagem para telas médias */
-        }
-    }
-
-
-@media (max-width: 700px) {
-    header {
-        padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
-        
-
-        nav{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 0 0 0;
-
-            ul{
-                align-items: center;
-                text-align: center;
-                padding: 0 0 0 0;
-                
-            }
-        }
-
-        #home {
-            flex-direction: column; /* Coloca o texto acima da imagem */
-
-            .textos-home {
-                width: 80%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
-
-                h1 {
-                    font-size: 5vw; /* Aumenta o tamanho relativo do texto para telas menores */
-                }
-
-                .btn-main {
-                    width: 60%; /* Botão ocupa toda a largura disponível no mobile */
-                    max-width: none; /* Remove limite no mobile */
-                    height: auto; /* Ajusta a altura */
-
-                    &:hover {
-                        /* Em vez de remover o botão, redefina o comportamento do hover */
-                        background-color: initial; /* Reseta a cor de fundo ao valor original */
-                        color: initial; /* Reseta a cor do texto ao valor original */
-                        cursor: default; /* Remove a mudança de cursor */
-                    }
-                }
-            }
-
-            .img-home {
-                display: block; 
-            }
+            max-width: 30vw;
         }
     }
 }
 
+@media (max-width: 700px) {
+    #home {
+        .textos-home {
+            width: 80%;
+
+            h1 {
+                font-size: 5vw;
+            }
+
+            .btn-main {
+                width: 60%;
+                max-width: none;
+                height: auto;
+            }
+        }
+    }
+}
 
 @media (max-width: 500px) {
     header {
-        padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
-       
-        nav{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 0 0 0;
+        padding: 2rem;
+    }
 
-            ul{
-                align-items: center;
-                text-align: center;
-                padding: 0 0 0 0;
-                
-            }
-        }
+    #home {
+        .textos-home {
+            width: 100%;
 
-        #home {
-            flex-direction: column; /* Coloca o texto acima da imagem */
-
-            .textos-home {
-                width: 100%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
-
-                h1 {
-                    font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
-                }
-
-                .btn-main {
-                    width: 80%; /* Botão ocupa toda a largura disponível no mobile */
-                    max-width: none; /* Remove limite no mobile */
-                    height: auto; /* Ajusta a altura */
-
-                    &:hover {
-                        /* Em vez de remover o botão, redefina o comportamento do hover */
-                        background-color: initial; /* Reseta a cor de fundo ao valor original */
-                        color: initial; /* Reseta a cor do texto ao valor original */
-                        cursor: default; /* Remove a mudança de cursor */
-                    }
-                }
+            h1 {
+                font-size: 6vw;
             }
 
-            .img-home {
-                display: block; 
+            .btn-main {
+                width: 80%; /* Botão ocupa toda a largura disponível no mobile */
+                max-width: none;
+                height: auto;
+
+                &:hover {
+                    background-color: variaveis.$cor-secundaria; /* Cor ao passar o mouse */
+                    color: white; /* Altere a cor do texto ao passar o mouse */
+                }
             }
         }
     }
 }
-
-
-
-
