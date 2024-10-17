@@ -75,7 +75,6 @@ header #home .textos-home .btn-main {
   cursor: pointer;
 }
 header #home .textos-home .btn-main:hover {
-  background: chartreuse;
   transform: scale(1.1);
 }
 header #home .img-home {
@@ -103,18 +102,16 @@ header #home .img-home img {
   #home .textos-home h1 {
     font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
   }
-  #home .img-home {
-    max-width: 30vw; /* Ajusta o tamanho da imagem para telas médias */
-  }
-  .btn-main {
+  #home .textos-home .btn-main {
+    background-color: rgb(173, 0, 0);
     width: 80vw; /* Botão mais largo em telas menores */
-    background-color: black;
+    cursor: none;
   }
-  .btn-main:hover {
-    /* Em vez de remover o botão, redefina o comportamento do hover */
-    background-color: initial; /* Reseta a cor de fundo ao valor original */
-    color: initial; /* Reseta a cor do texto ao valor original */
-    cursor: default; /* Remove a mudança de cursor */
+  #home .textos-home .btn-main:hover {
+    transform: scale(1.1);
+  }
+  .img-home {
+    max-width: 30vw; /* Ajusta o tamanho da imagem para telas médias */
   }
 }
 @media (max-width: 700px) {
