@@ -7,7 +7,7 @@ body {
 
 header {
   background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
-  padding: 2rem;
+  padding: 2rem; /* Padding inicial */
 }
 header nav {
   display: flex;
@@ -47,16 +47,19 @@ header #home {
   justify-content: space-between;
 }
 header #home .textos-home {
-  width: 100%;
+  width: 100%; /* Ajusta a largura para ser responsiva */
 }
 header #home .textos-home h1 {
-  font-size: 3vw;
+  font-size: 3vw; /* Ajusta o tamanho do texto proporcional à largura da tela */
   color: #0C0421;
   margin-bottom: 2rem;
   font-family: "Krona One", sans-serif;
 }
 header #home .textos-home h1 span {
   color: #4e75ff;
+}
+header #home .textos-home ahover {
+  font-weight: bold;
 }
 header #home .textos-home .btn-main {
   background-color: #4e75ff;
@@ -79,8 +82,8 @@ header #home .textos-home .btn-main:focus, header #home .textos-home .btn-main:a
   outline: none; /* Remove o contorno padrão, se necessário */
 }
 header #home .img-home {
-  max-width: 50vw;
-  max-width: 474px;
+  max-width: 50vw; /* Ajusta a largura da imagem proporcionalmente */
+  max-width: 474px; /* Define um limite máximo */
 }
 header #home .img-home img {
   width: 100%;
@@ -88,60 +91,109 @@ header #home .img-home img {
 
 @media (max-width: 880px) {
   header {
-    padding: 2rem;
+    padding: 2rem; /* Reduz o padding do header em telas médias */
   }
   #home {
-    flex-direction: column; /* Coloca o texto acima da imagem */
+    flex-direction: row; /* Alinha itens em coluna em telas menores */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
   }
   #home .textos-home {
-    width: 100%;
+    width: 100%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
   }
   #home .textos-home h1 {
-    font-size: 6vw;
+    font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
   }
   #home .textos-home .btn-main {
-    background-color: black; /* Cor diferente em telas menores */
+    background-color: black !important;
+    width: 80vw; /* Botão mais largo em telas menores */
   }
   #home .textos-home .btn-main:hover {
-    background-color: #0C0421; /* Mantenha a cor de fundo ao passar o mouse */
-    color: white; /* Altere a cor do texto ao passar o mouse */
+    background-color: #0C0421 !important; /* Mantenha a cor de fundo ao passar o mouse */
+    color: white !important; /* Altere a cor do texto ao passar o mouse */
   }
-  #home .img-home {
-    max-width: 30vw;
+  .img-home {
+    max-width: 30vw; /* Ajusta o tamanho da imagem para telas médias */
   }
 }
 @media (max-width: 700px) {
-  #home .textos-home {
-    width: 80%;
+  header {
+    padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
   }
-  #home .textos-home h1 {
-    font-size: 5vw;
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 0 0 0;
   }
-  #home .textos-home .btn-main {
-    width: 60%;
-    max-width: none;
-    height: auto;
+  header nav ul {
+    align-items: center;
+    text-align: center;
+    padding: 0 0 0 0;
+  }
+  header #home {
+    flex-direction: column; /* Coloca o texto acima da imagem */
+  }
+  header #home .textos-home {
+    width: 80%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
+  }
+  header #home .textos-home h1 {
+    font-size: 5vw; /* Aumenta o tamanho relativo do texto para telas menores */
+  }
+  header #home .textos-home .btn-main {
+    width: 60%; /* Botão ocupa toda a largura disponível no mobile */
+    max-width: none; /* Remove limite no mobile */
+    height: auto; /* Ajusta a altura */
+  }
+  header #home .textos-home .btn-main:hover {
+    background-color: #4e75ff !important; /* Cor ao passar o mouse */
+    color: white !important; /* Altere a cor do texto ao passar o mouse */
+  }
+  header #home .img-home {
+    display: block;
   }
 }
 @media (max-width: 500px) {
   header {
-    padding: 2rem;
+    padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
   }
-  #home .textos-home {
-    width: 100%;
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 0 0 0;
   }
-  #home .textos-home h1 {
-    font-size: 6vw;
+  header nav ul {
+    align-items: center;
+    text-align: center;
+    padding: 0 0 0 0;
   }
-  #home .textos-home .btn-main {
+  header #home {
+    flex-direction: column; /* Coloca o texto acima da imagem */
+  }
+  header #home .textos-home {
+    width: 100%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
+  }
+  header #home .textos-home h1 {
+    font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
+  }
+  header #home .textos-home .btn-main {
     width: 80%; /* Botão ocupa toda a largura disponível no mobile */
-    max-width: none;
-    height: auto;
+    max-width: none; /* Remove limite no mobile */
+    height: auto; /* Ajusta a altura */
   }
-  #home .textos-home .btn-main:hover {
-    background-color: #4e75ff; /* Cor ao passar o mouse */
-    color: white; /* Altere a cor do texto ao passar o mouse */
+  header #home .textos-home .btn-main:hover {
+    background-color: #4e75ff !important; /* Cor ao passar o mouse */
+    color: white !important; /* Altere a cor do texto ao passar o mouse */
+  }
+  header #home .img-home {
+    display: block;
   }
 }
 #nosso-espaco .detalhes {
