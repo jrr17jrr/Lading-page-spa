@@ -222,10 +222,10 @@ header #home .img-home img {
     flex-direction: column; /* Coloca o texto acima da imagem */
   }
   header #home .textos-home {
-    width: 100%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
+    width: 90%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
   }
   header #home .textos-home h1 {
-    font-size: 7vw; /* Aumenta o tamanho relativo do texto para telas menores */
+    font-size: 5vw; /* Aumenta o tamanho relativo do texto para telas menores */
   }
   header #home .textos-home .btn-main {
     width: 100%; /* Botão ocupa toda a largura disponível no mobile */
