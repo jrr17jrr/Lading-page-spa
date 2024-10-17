@@ -2,7 +2,7 @@
 @use '../abstract/mixins';
 
 header {
-    background: variaveis.$gradiente-primario;
+    background: black;
     padding: 2rem; /* Padding inicial */
 
     nav {
@@ -135,7 +135,7 @@ header {
 @media (max-width: 700px) {
     header {
         padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
-        background: variaveis.$gradiente-primario;
+        background: rgb(36, 228, 61);
 
         nav{
             display: flex;
@@ -188,8 +188,7 @@ header {
 @media (max-width: 400px) {
     header {
         padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
-        background: variaveis.$gradiente-primario;
-
+        background: rgb(117, 0, 0);
         nav{
             display: flex;
             flex-direction: column;
@@ -242,7 +241,7 @@ header {
 @media (max-width: 320px) {
     header {
         padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
-        background: variaveis.$gradiente-primario;
+        background: aqua;
 
         nav{
             display: flex;

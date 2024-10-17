@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
+  background: black;
   padding: 2rem; /* Padding inicial */
 }
 header nav {
@@ -119,7 +119,7 @@ header #home .img-home img {
 @media (max-width: 700px) {
   header {
     padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
-    background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
+    background: rgb(36, 228, 61);
   }
   header nav {
     display: flex;
@@ -161,7 +161,7 @@ header #home .img-home img {
 @media (max-width: 400px) {
   header {
     padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
-    background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
+    background: rgb(117, 0, 0);
   }
   header nav {
     display: flex;
@@ -203,7 +203,7 @@ header #home .img-home img {
 @media (max-width: 320px) {
   header {
     padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
-    background: linear-gradient(180deg, #E8F5C8 0%, #FFFFFF 96.87%);
+    background: aqua;
   }
   header nav {
     display: flex;
