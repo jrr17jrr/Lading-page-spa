@@ -121,7 +121,12 @@ header {
     }
 
 
-    
+    .btn-main {
+       
+        &:hover {
+            cursor: default; /* Remove a mudança de cursor */
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -161,9 +166,6 @@ header {
                     height: auto; /* Ajusta a altura */
 
                     &:hover {
-                        /* Em vez de remover o botão, redefina o comportamento do hover */
-                        background-color: initial; /* Reseta a cor de fundo ao valor original */
-                        color: initial; /* Reseta a cor do texto ao valor original */
                         cursor: default; /* Remove a mudança de cursor */
                     }
                 }
@@ -213,9 +215,6 @@ header {
                     height: auto; /* Ajusta a altura */
 
                     &:hover {
-                        /* Em vez de remover o botão, redefina o comportamento do hover */
-                        background-color: initial; /* Reseta a cor de fundo ao valor original */
-                        color: initial; /* Reseta a cor do texto ao valor original */
                         cursor: default; /* Remove a mudança de cursor */
                     }
                 }
