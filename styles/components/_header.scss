@@ -99,9 +99,13 @@ header {
         flex-direction: column;
         text-align: center;
 
+
+
         .textos-home {
+             width: 100%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
+
             h1 {
-                font-size: 100%; /* Aumenta a responsividade do texto */
+                font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
                 
                 
             }
@@ -128,7 +132,60 @@ header {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
+    header {
+        padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
+        background: variaveis.$gradiente-primario;
+
+        nav{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 0 0 0;
+
+            ul{
+                align-items: center;
+                text-align: center;
+                padding: 0 0 0 0;
+                
+            }
+        }
+
+        #home {
+            flex-direction: column; /* Coloca o texto acima da imagem */
+
+            .textos-home {
+                width: 80%; /* Certifica-se de que o texto ocupa toda a largura no mobile */
+
+                h1 {
+                    font-size: 5vw; /* Aumenta o tamanho relativo do texto para telas menores */
+                }
+
+                .btn-main {
+                    width: 100%; /* Botão ocupa toda a largura disponível no mobile */
+                    max-width: none; /* Remove limite no mobile */
+                    height: auto; /* Ajusta a altura */
+
+                    &:hover {
+                        /* Em vez de remover o botão, redefina o comportamento do hover */
+                        background-color: initial; /* Reseta a cor de fundo ao valor original */
+                        color: initial; /* Reseta a cor do texto ao valor original */
+                        cursor: default; /* Remove a mudança de cursor */
+                    }
+                }
+            }
+
+            .img-home {
+                display: block; 
+            }
+        }
+    }
+}
+
+
+@media (max-width: 400px) {
     header {
         padding: 2rem; /* Reduz ainda mais o padding em telas pequenas */
         background: variaveis.$gradiente-primario;
@@ -179,4 +236,6 @@ header {
         }
     }
 }
+
+
 
