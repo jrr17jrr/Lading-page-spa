@@ -66,11 +66,10 @@ header {
 
             .btn-main {
                 @include mixins.botao;
-                
-                
+                                
 
                 &:hover {
-                    background: variaveis.$cor-secundaria;
+                    background: chartreuse;
                     transform: scale(1.1);
                 }
             }
@@ -110,14 +109,6 @@ header {
                 
             }
 
-            .btn-main {
-                background-color: yellow;
-            
-                &:hover, &:active {
-                    background-color: variaveis.$cor-secundaria;
-                    transform: scale(1.0);
-                }
-            }
         }
 
         .img-home {
@@ -126,8 +117,17 @@ header {
     }
 
 
-       
+    .btn-main {
+        width: 80vw; /* Botão mais largo em telas menores */
+        background-color: black;
 
+        &:hover {
+            /* Em vez de remover o botão, redefina o comportamento do hover */
+            background-color: initial; /* Reseta a cor de fundo ao valor original */
+            color: initial; /* Reseta a cor do texto ao valor original */
+            cursor: default; /* Remove a mudança de cursor */
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -166,7 +166,12 @@ header {
                     max-width: none; /* Remove limite no mobile */
                     height: auto; /* Ajusta a altura */
 
-                
+                    &:hover {
+                        /* Em vez de remover o botão, redefina o comportamento do hover */
+                        background-color: initial; /* Reseta a cor de fundo ao valor original */
+                        color: initial; /* Reseta a cor do texto ao valor original */
+                        cursor: default; /* Remove a mudança de cursor */
+                    }
                 }
             }
 
@@ -213,6 +218,12 @@ header {
                     max-width: none; /* Remove limite no mobile */
                     height: auto; /* Ajusta a altura */
 
+                    &:hover {
+                        /* Em vez de remover o botão, redefina o comportamento do hover */
+                        background-color: initial; /* Reseta a cor de fundo ao valor original */
+                        color: initial; /* Reseta a cor do texto ao valor original */
+                        cursor: default; /* Remove a mudança de cursor */
+                    }
                 }
             }
 

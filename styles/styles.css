@@ -75,7 +75,7 @@ header #home .textos-home .btn-main {
   cursor: pointer;
 }
 header #home .textos-home .btn-main:hover {
-  background: #4e75ff;
+  background: chartreuse;
   transform: scale(1.1);
 }
 header #home .img-home {
@@ -103,11 +103,12 @@ header #home .img-home img {
   #home .textos-home h1 {
     font-size: 6vw; /* Aumenta o tamanho relativo do texto para telas menores */
   }
-  #home .textos-home .btn-main {
-    width: 80vw; /* Botão mais largo em telas menores */
-  }
   #home .img-home {
     max-width: 30vw; /* Ajusta o tamanho da imagem para telas médias */
+  }
+  .btn-main {
+    width: 80vw; /* Botão mais largo em telas menores */
+    background-color: black;
   }
   .btn-main:hover {
     /* Em vez de remover o botão, redefina o comportamento do hover */
