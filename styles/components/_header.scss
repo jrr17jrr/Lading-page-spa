@@ -115,7 +115,7 @@ header {
                 background-color: black !important;; // Cor diferente em telas menores
                
                 &:hover {
-                    background-color: initial !important;; // Reseta a cor de fundo ao valor original
+                    background-color: black !important;; // Reseta a cor de fundo ao valor original
                     color: initial !important;; // Reseta a cor do texto ao valor original
                     cursor: default !important;; // Remove a mudança de cursor
                 }

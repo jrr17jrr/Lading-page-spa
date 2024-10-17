@@ -106,7 +106,7 @@ header #home .img-home img {
     background-color: black !important;
   }
   #home .textos-home .btn-main:hover {
-    background-color: initial !important;
+    background-color: black !important;
     color: initial !important;
     cursor: default !important;
   }
