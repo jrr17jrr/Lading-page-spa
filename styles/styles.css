@@ -77,10 +77,6 @@ header #home .textos-home .btn-main {
 header #home .textos-home .btn-main:hover {
   transform: scale(1.1);
 }
-header #home .textos-home .btn-main:focus, header #home .textos-home .btn-main:active {
-  background-color: #4e75ff; /* Defina uma cor ao focar ou clicar */
-  outline: none; /* Remove o contorno padrão, se necessário */
-}
 header #home .img-home {
   max-width: 50vw; /* Ajusta a largura da imagem proporcionalmente */
   max-width: 474px; /* Define um limite máximo */

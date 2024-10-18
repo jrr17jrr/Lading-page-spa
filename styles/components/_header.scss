@@ -72,11 +72,8 @@ header {
                     transform: scale(1.1);
                 }
 
-                &:focus,
-                &:active {
-                    background-color: variaveis.$cor-secundaria; /* Defina uma cor ao focar ou clicar */
-                    outline: none; /* Remove o contorno padrão, se necessário */
-                }
+                
+    
             }
         }
 
