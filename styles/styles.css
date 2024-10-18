@@ -473,6 +473,10 @@ header #home .img-home img {
   #desconto button {
     width: 20%; /* Ajusta a largura do botão */
   }
+  #desconto button:hover {
+    background: #4e75ff;
+    transform: scale(1);
+  }
 }
 @media (max-width: 500px) {
   #desconto {
