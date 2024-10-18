@@ -275,7 +275,7 @@
 
         &:hover {
             background: variaveis.$cor-secundaria;
-            transform: scale(1.0);
+            transform: scale(1.0)!important;
                 
         }
     }

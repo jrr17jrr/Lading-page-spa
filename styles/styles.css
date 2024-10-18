@@ -471,7 +471,7 @@ header #home .img-home img {
   }
   #desconto button:hover {
     background: #4e75ff;
-    transform: scale(1);
+    transform: scale(1) !important;
   }
 }
 @media (max-width: 500px) {
@@ -705,7 +705,7 @@ header #home .img-home img {
   }
   .btn:hover {
     background: #4e75ff;
-    transform: scale(1);
+    transform: scale(1) !important;
   }
 }
 @media (max-width: 500px) {
